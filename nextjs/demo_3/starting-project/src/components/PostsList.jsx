@@ -14,6 +14,7 @@ function PostsList({isPosting, onStopPosting}){
       setIsFetching(true);
       const response = await fetch('http://localhost:8080/posts');
       const resData = await response.json();
+
       setPosts(resData.posts);
       setIsFetching(false);
       }
